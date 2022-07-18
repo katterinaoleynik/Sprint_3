@@ -36,5 +36,4 @@ public class CourierClient extends RestAssuredClient {
                 .delete(COURIER_PATH + courierId)
                 .then();
     }
-
 }

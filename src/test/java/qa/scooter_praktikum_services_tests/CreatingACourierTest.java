@@ -2,9 +2,9 @@ package qa.scooter_praktikum_services_tests;
 
 
 import api.CourierClient;
+import api.CourierCredentials;
 import api.RestAssuredClient;
 import api.Courier;
-import api.CourierCredentials;
 import io.qameta.allure.junit4.DisplayName;
 import io.restassured.response.ValidatableResponse;
 import org.junit.Before;

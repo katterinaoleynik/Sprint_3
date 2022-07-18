@@ -5,6 +5,7 @@ import api.Courier;
 import api.CourierCredentials;
 import io.qameta.allure.junit4.DisplayName;
 import io.restassured.response.ValidatableResponse;
+import org.junit.After;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -21,7 +22,10 @@ public class ValidationOfCourierLoginTest {
     private String expectedErrorMessage;
     private CourierCredentials courierCredentials;
 
-
+    @After
+    public void tearDown() {
+        courierClient.deleteCourier(courierId);
+    }
     public ValidationOfCourierLoginTest(CourierCredentials courierCredentials, int expectedStatus, String expectedErrorMessage) {
         this.courierCredentials = courierCredentials;
         this.expectedStatus = expectedStatus;

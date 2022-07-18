@@ -3,7 +3,7 @@ package qa.scooter_praktikum_services_tests;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CreateOrder {
+public class CreateOrderTest {
     private String firstName;
     private String lastName;
     private String address;

@@ -1,6 +1,5 @@
 package qa.scooter_praktikum_services_tests;
 
-import api.OrderClient;
 import api.Order;
 import io.qameta.allure.junit4.DisplayName;
 import io.restassured.response.ValidatableResponse;

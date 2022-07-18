@@ -1,13 +1,14 @@
-package qa.scooter_praktikum_services_tests;
+package api;
 
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
+import qa.scooter_praktikum_services_tests.CreateOrderTest;
 
 import static io.restassured.RestAssured.given;
 
 public class OrderService {
 
-    public static Response create(CreateOrder createOrder) {
+    public static Response create(CreateOrderTest createOrder) {
         return given()
                 .contentType(ContentType.JSON)
                 .body(createOrder)

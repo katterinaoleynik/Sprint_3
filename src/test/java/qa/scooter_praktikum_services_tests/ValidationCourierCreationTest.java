@@ -5,6 +5,7 @@ import api.Courier;
 import api.CourierCredentials;
 import io.qameta.allure.junit4.DisplayName;
 import io.restassured.response.ValidatableResponse;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -28,7 +29,10 @@ public class ValidationCourierCreationTest {
     public void setUp() {
         courierClient = new CourierClient();
     }
-
+    @After
+    public void tearDown() {
+        courierClient.deleteCourier(courierId);
+    }
 
     public ValidationCourierCreationTest(Courier courier, int expectedStatusCode, String expectedErrorMessage) {
         this.courier = courier;
